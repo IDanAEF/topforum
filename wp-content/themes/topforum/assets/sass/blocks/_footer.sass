@@ -1,0 +1,41 @@
+.footer
+    height: 365px
+    background-color: #323232
+    display: flex
+    align-items: center
+    a 
+        text-decoration: none 
+        color: white
+        &:hover 
+            text-decoration: underline
+    &__top
+        display: flex
+        border-bottom: 1px solid #474747
+        padding-bottom: 60px
+        margin-bottom: 30px
+        &-right
+            &-title
+                color: #c99c47 !important
+            div 
+                margin-bottom: 7px
+                &.address
+                    margin-bottom: 32px
+        &-left
+            position: relative
+            margin-right: 105px
+            &::after
+                content: ''
+                position: absolute
+                width: 1px
+                height: 210px
+                background-color: #474747
+                right: -57px
+                top: -8px
+        &-list
+            list-style-type: none
+            li 
+                &:not(:last-child)
+                    margin-bottom: 7px
+                &:first-child
+                    a 
+                        color: #c99c47
