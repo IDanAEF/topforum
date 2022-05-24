@@ -74,7 +74,7 @@
     function topforumAddScripts() {
         wp_enqueue_style( 'topforum_main_style', get_template_directory_uri() . '/assets/css/style.min.css' );
     
-        wp_enqueue_script( 'topforum_main_scrit', get_template_directory_uri() . '/assets/js/script.js', array(), null, true );
+        wp_enqueue_script( 'topforum_main_scrit', get_template_directory_uri() . '/assets/prodJs/script.js', array(), null, true );
     }
     
     add_action( 'wp_enqueue_scripts', 'topforumAddScripts' );
