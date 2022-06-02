@@ -43,6 +43,14 @@
             </div>
         </div>
     </div>
+    <div class="modal">
+        <div class="modal__subscribe modal__cont">
+            <div class="modal__close">
+                <span></span><span></span>
+            </div>
+            <?php echo do_shortcode( '[contact-form-7 id="214" title="Subscribe"]' ); ?>
+        </div>
+    </div>
 </footer>
 <?php
     wp_footer();

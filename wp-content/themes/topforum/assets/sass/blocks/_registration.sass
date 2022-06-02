@@ -1,0 +1,92 @@
+.registration
+    padding: 42px 0px
+    .hide
+        height: 0px
+        opacity: 0
+        visibility: hidden
+    .sponsors__clients-tab 
+        margin: 0
+    &__tab
+        height: 50px
+        position: relative
+        display: flex
+        align-items: center
+        cursor: pointer
+        &-arrow
+            position: absolute
+            top: 50%
+            transform: translateY(-50%)
+            right: 0px 
+            padding: 15px 12px
+            transition: 0.4s all
+            &.active
+                transform: translateY(-50%) rotate(180deg) 
+        &-list 
+            position: absolute
+            width: 100%
+            top: 98%
+            left: 0
+            transition: 0.4s all
+            z-index: 10
+        &-item 
+            height: 48px
+            background-color: #fff
+            padding: 0px 24px
+            display: flex
+            align-items: center
+            cursor: pointer
+            &:hover 
+                background-color: #d6d6d6
+    &__title
+        text-align: center
+    &__ways
+        margin: 30px auto 45px
+        display: flex
+        flex-direction: column
+        align-items: center
+        &-arrow
+            margin: 8px 0px
+            width: 22px
+        &-item
+            width: 414px
+            height: 58px
+            background-color: #ffffff
+            border: 2px solid #c99c47
+            display: flex
+            align-items: center
+            justify-content: center
+    form 
+        width: 660px
+        margin: 0 auto
+    &__inputs
+        &-row
+            width: 100%
+            display: flex
+            justify-content: space-between
+            align-items: center
+            margin-bottom: 11px
+            .pack, .paym
+                display: flex
+                span 
+                    display: flex
+                    width: 119px
+                    height: 50px
+                    background-color: #f2ead8
+                    margin-right: 3px
+                    align-items: center
+                    justify-content: center
+                    cursor: pointer
+                    transition: 0.6s all
+                    &:hover 
+                        background-color: #e2cc9d
+                    &.active
+                        background-color: #e2cc9d
+            .paym
+                span 
+                    width: 105px
+            input, .pack, .paym, .registration__tab
+                width: 427px
+            input, .registration__tab 
+                height: 50px
+                border: 1px solid #e8d8b6
+                padding: 0px 18px

@@ -51,7 +51,7 @@
                         ?>
                     </div>
                 </div>
-                <a href="#" class="header__bottom-button button button_orange text_white text_fz13">
+                <a href="/registration/" class="header__bottom-button button button_orange text_white text_fz13">
                     Register Now
                 </a>
             </div>
