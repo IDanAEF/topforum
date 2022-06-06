@@ -44,15 +44,17 @@
                             <div class="sponsors__clients-page <?php echo mb_strtolower(get_the_title()); echo "_page"; ?>">
                                 <?php
                                     $j = 0;
-                                    while(get_field('conferences_' . $i . '_sponsors_' . $j . '_name')) {
+                                    while(get_field('conferences_' . $i . '_sponsors_' . $j . '_link')) {
+                                        $writeId = url_to_postid(get_field('conferences_' . $i . '_sponsors_' . $j . '_link'));
+                                        $descr = get_post_meta( $writeId, 'anonce_descr', true );
                                         ?>
                                             <div class="sponsors__clients-page-item <?php echo mb_strtolower(get_the_title()); echo "_page"; ?>">
                                                 <div class="sponsors__clients-page-item-type text text_fw500 text_orange text_upp"><?php the_field('conferences_' . $i . '_sponsors_' . $j . '_type'); ?></div>
                                                 <div class="sponsors__clients-page-item-logo <?php echo mb_strtolower(get_the_title()); echo "_page"; ?>">
-                                                    <img src="<?php the_field('conferences_' . $i . '_sponsors_' . $j . '_logo'); ?>" alt="">
+                                                    <?php echo get_the_post_thumbnail( $writeId, 'full'); ?>
                                                 </div>
-                                                <div class="sponsors__clients-page-item-name title title_fz17 text_fw500 text_upp"><?php the_field('conferences_' . $i . '_sponsors_' . $j . '_name'); ?></div>
-                                                <div class="sponsors__clients-page-item-descr text text_fz15 text_fw300"><?php the_field('conferences_' . $i . '_sponsors_' . $j . '_descr'); ?></div>
+                                                <div class="sponsors__clients-page-item-name title title_fz17 text_fw500 text_upp"><?php echo get_the_title($writeId); ?></div>
+                                                <div class="sponsors__clients-page-item-descr text text_fz15 text_fw300"><?php echo strlen($descr) > 95 ? substr($descr, 0, 95) . '...' : $descr; ?></div>
                                                 <a href="<?php the_field('conferences_' . $i . '_sponsors_' . $j . '_link'); ?>" class="sponsors__clients-page-item-link text_white text_fz13 button button_small">
                                                     Learn more
                                                 </a>

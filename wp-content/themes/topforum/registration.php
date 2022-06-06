@@ -68,6 +68,13 @@
                     <input type="text" id="regpay" value="" name="regpay" class="text text_fz14 text_fw300" hidden>
                 </div>
             </div>
+            <div class="registration__accept">
+                <div class="registration__accept-checkbox">
+                    <input type="checkbox" name="regaccept" id="regaccept">
+                    <label for="regaccept" class="text text_fz14 text_fw300">I accept Terms&Conditions</label>
+                </div>
+                <button class="button button_orange text text_fz13 text_white">Submit</button>
+            </div>
         </form>
     </div>
 </main>
